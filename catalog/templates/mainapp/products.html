@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Список товаров</title>
-</head>
-<body>
-    Список товаров
-</body>
-</html>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h2>Список товаров в каталоге:</h2>
+        {% include 'includes/inc_table_products.html' %}
+    </div>
+
+{% endblock %}

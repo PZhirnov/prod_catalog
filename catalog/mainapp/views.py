@@ -9,6 +9,6 @@ def test(request):
     return HttpResponse("Here's the text of the web page.")
 
 
-class ProductsLIstView(ListView):
+class ProductsListView(ListView):
     model = Product
     template_name = 'mainapp/products.html'
