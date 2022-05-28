@@ -1,10 +1,16 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 
+
 {% block content %}
-    <div class="container">
-        <h2>Список товаров в каталоге:</h2>
-        {% include 'includes/inc_table_products.html' %}
-    </div>
+        <div class="row">
+                    <div class="col-3 menu_block">
+                            {% include 'includes/inc_menu.html' %}
+                    </div>
+                    <div class="col">
+                            <h3>Выбрана категория:{{ catalog_title }}</h3>
+                            {% include 'includes/inc_table_products.html' %}
+                    </div>
+        </div>
 
 {% endblock %}
