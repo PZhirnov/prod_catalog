@@ -6,7 +6,7 @@
   </a>
   {% for item in catalogs %}
     <a href="{% url 'mainapp:catalogs' item.pk %}"
-       class="list-group-item list-group-item-action {% if item.pk == catalog_pk %}active{% endif %}">
+       class="list-group-item list-group-item-action effect {% if item.pk == catalog_pk %}active{% endif %}">
       {{ item.title }}
     </a>
   {% endfor %}
