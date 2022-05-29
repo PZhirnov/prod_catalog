@@ -1,0 +1,13 @@
+<div class="list-group">
+
+  <a href="{% url 'mainapp:catalogs' %}"
+     class="list-group-item list-group-item-action {% if not catalog_pk %}active{% endif %}">
+    Показать все
+  </a>
+  {% for item in catalogs %}
+    <a href="{% url 'mainapp:catalogs' item.pk %}"
+       class="list-group-item list-group-item-action effect {% if item.pk == catalog_pk %}active{% endif %}">
+      {{ item.title }}
+    </a>
+  {% endfor %}
+</div> {{ item.pk }}
