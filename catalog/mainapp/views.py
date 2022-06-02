@@ -1,3 +1,4 @@
+from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.list import ListView
@@ -27,6 +28,7 @@ class CatalogListView(ListView):
 
         context['catalogs'] = Catalog.objects.all()
         context['catalog_pk'] = catalog_pk
+        context['site'] = get_current_site(self.request)
         # print(type(catalog_pk))
         return context
 
@@ -38,4 +40,5 @@ class MainListView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(MainListView, self).get_context_data(*args, **kwargs)
+        context.update({'site': get_current_site(self.request)})
         return context
