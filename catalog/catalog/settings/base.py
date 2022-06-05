@@ -137,6 +137,10 @@ STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
 ]
 
+# каталог, куда созраняется статика для nginx python
+# manage.py collectstatic --settings=catalog.settings.debug_ext
+STATIC_ROOT = BASE_DIR / '..' / 'nginx' / 'static'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
