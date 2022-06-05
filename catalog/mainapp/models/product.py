@@ -15,6 +15,7 @@ class Product(models.Model):
     name = models.CharField(verbose_name='наименование товара', max_length=64, unique=True)
     catalog = models.ManyToManyField(Catalog)
     price = models.FloatField(verbose_name='стоимость единицы товара')
+    image = models.ImageField(upload_to='img_products/', null=True)
     unit_of_measure = models. CharField(max_length=10,
                                         choices=UnitOfMeasure.choices,
                                         default=UnitOfMeasure.one_piece)

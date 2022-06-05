@@ -2,6 +2,7 @@
   <thead class="thead-inverse">
     <tr>
       <th>ID</th>
+      <th>Изображение</th>
       <th>Наименование товара</th>
       <th>Стоимость</th>
       <th>Ед. изм.</th>
@@ -18,6 +19,11 @@
   {% for item in object_list %}
     <tr>
       <th scope="row">{{ item.pk }}</th>
+      <td>
+        <div class="img_container">
+          <img src="/media/{{ item.image }}" class="prod_img">
+        </div>
+      </td>
       <td>{{ item.name }}</td>
       <td>{{ item.price }}</td>
       <td>{{ item.unit_of_measure }}</td>

@@ -16,8 +16,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
-
-
 ALLOWED_HOSTS = ['*']
 
 SITE_ID = 1
@@ -136,6 +134,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # каталог, куда созраняется статика для nginx python
 # manage.py collectstatic --settings=catalog.settings.debug_ext
