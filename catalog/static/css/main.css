@@ -2,3 +2,12 @@
     margin: 25px;
 }
 
+.img_container {
+    width: 100px;
+    height: 100px;
+}
+.prod_img {
+    width: 100%;
+    height: auto;
+}
+

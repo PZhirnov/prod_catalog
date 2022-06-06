@@ -130,3 +130,4 @@ dmypy.json
 
 # Word
 Django_задание.docx
+/nginx/static/
