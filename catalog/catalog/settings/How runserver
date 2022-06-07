@@ -1,0 +1,3 @@
+runserver --catalog.settings=settings.site_1
+runserver --settings=settings.site_2
+runserver --settings=settings.debug
